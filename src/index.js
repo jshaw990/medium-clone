@@ -6,7 +6,7 @@ import { Switch, Route } from 'react-router-dom';
 import { ConnectedRouter } from 'react-router-redux';
 
 import App from './App.js';
-import serviceWorker from './serviceWorker';
+import * as serviceWorker from './serviceWorker';
 import { store, history } from './redux/store';
 import { getUser } from './redux/actions/actions'
 
