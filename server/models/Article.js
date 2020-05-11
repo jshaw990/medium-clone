@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-let ArticleSchema  new mongoose.Schema(
+let ArticleSchema = new mongoose.Schema(
     {
         text: String,
         title: String,
@@ -8,7 +8,7 @@ let ArticleSchema  new mongoose.Schema(
         feature_img: String,
         claps: Number,
         author: {
-            type: mongoose.SchemaType.Types.ObjectId,
+            type: mongoose.Schema.Types.ObjectId,
             ref: 'User'
         },
         comments: [
@@ -22,15 +22,15 @@ let ArticleSchema  new mongoose.Schema(
         ] 
     }
 );
-ArticleSchema.methods.clap = function(){
+ArticleSchema.methods.clap = function() {
     this.claps++
     return this.save()
 }
-ArticleSchema.method.comment = function(c) {
+ArticleSchema.methods.comment = function(c) {
     this.comments.push(c)
     return this.save()
 }
-ArticleSchema.methods.addAuthor = function(author_id) {
+ArticleSchema.methods.addAuthor = function (author_id) {
     this.author = author_id
     return this.save()
 }
