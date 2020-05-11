@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import {
     follow,
     toggleOpen
-} from './../redux/acions/actions'
+} from './../redux/actions/actions'
 
 class FollowButton extends Component {
     constructor(props) {

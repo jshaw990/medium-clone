@@ -84,7 +84,7 @@ module.exports = {
             next()
         })*/
 
-        /*var storage = multer.diskStorage({
+        /*let storage = multer.diskStorage({
             destination: function (req, file, callback) {
                 callback(null, './uploads')
             },
@@ -92,7 +92,7 @@ module.exports = {
                 callback(null, )
             }
         })
-        var upload = multer({
+        let upload = multer({
             storage: storage
         }).single('userFile')
         upload(req, res, function(err) {
